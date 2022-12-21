@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1651786594 source:c:\users\ereng\desktop\eren\coding\codeblocks\projects\c\games\testgame-3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+	<string.h>
+	<ctype.h>
+
