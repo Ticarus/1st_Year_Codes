@@ -3,43 +3,23 @@
 
 int main()
 {
-    int day;
-    printf("Input day number(1-7):");
-    scanf("%d",&day);
-    if(day >= 1 && day <= 7)
+    int i,j,n;
+    printf("Input row count:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
     {
-        if(day == 1)
+        for(j=1;j<=i;j++)
         {
-            printf("Monday");
+            if(j%2==1)
+            {
+                printf("0");
+            }
+            else
+            {
+                printf("1");
+            }
         }
-        else if(day == 2)
-        {
-            printf("Tuesday");
-        }
-        else if(day == 3)
-        {
-            printf("Wednesday");
-        }
-        else if(day == 4)
-        {
-            printf("Thursday");
-        }
-        else if(day == 5)
-        {
-            printf("Friday");
-        }
-        else if(day == 6)
-        {
-            printf("Saturday");
-        }
-        else if(day == 7)
-        {
-            printf("Sunday");
-        }
-    }
-    else
-    {
-        printf("Invalid day number\nTry again");
+        printf("\n");
     }
     return 0;
 }

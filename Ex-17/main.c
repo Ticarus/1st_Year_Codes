@@ -3,21 +3,14 @@
 
 int main()
 {
-    int buy,sell,profit;
-    printf("Input buy&sell prices: ");
-    scanf("%d%d",&buy,&sell);
-    profit = sell - buy;
-    if(profit > 0)
+    float i,n,sum=0.0;
+    printf("Input the number of terms:");
+    scanf("%f",&n);
+    for(i=1;i<=n;i++)
     {
-        printf("Profit:%d",profit);
+        printf("%.2f ",1/i);
+        sum += 1/i;
     }
-    else if(profit == 0)
-    {
-        printf("No profit");
-    }
-    else
-    {
-        printf("Loss:%d",profit);
-    }
+    printf("\nSum of series up to %.0f is %.2f",n,sum);
     return 0;
 }

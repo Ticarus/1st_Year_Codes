@@ -3,28 +3,15 @@
 
 int main()
 {
-    char grade;
-    printf("Input the Grade:");
-    scanf("%c",&grade);
-    if(grade == 'A')
+    int i,n,sum=0,t=9;
+    printf("Input the number of terms:");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
     {
-        printf("Excellent");
+        sum +=t;
+        printf("%d   ",t);
+        t = t*10+9;
     }
-    else if(grade == 'B')
-    {
-        printf("Very Good");
-    }
-    else if(grade == 'C')
-    {
-        printf("Good");
-    }
-    else if(grade == 'D')
-    {
-        printf("Average");
-    }
-    else if(grade == 'F')
-    {
-        printf("Failed");
-    }
+    printf("\nThe sum of the series = %d",sum);
     return 0;
 }
