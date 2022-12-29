@@ -1,19 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()     //This code is to learn what continue does
+int main()
 {
-    int i;
+    float pi , radius , perimeter , area;
 
-    for(i=0;i<=10;i++)
-    {
-        if((i%2)==1)
-        {
-            printf("I'm rather odd...\n");
+    pi = 3.14;
 
-            continue;   //When this is executed the loop sequence restarts early
-        }
-        printf("Even up!\n");
-    }
+    printf("Enter the radius of circle --> ");
+
+    scanf("%f",&radius);
+
+    perimeter = 2 * pi * radius;
+
+    area = pi * (radius * radius);
+
+    printf("Perimeter of circle is %.1f\nArea of circle is %.1f",perimeter,area);
+
     return 0;
 }

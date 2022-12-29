@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int main()         //To learn putchar()
+int main()
 {
-    int i;
-    char msg[] = "C is fun!";
+    int num1 , num2 , sum;
 
-    for(i=0;i<strlen(msg);i++)
-    {
-        putchar(msg[i]);   //Outputs a single character
-    }
+    printf("Enter the first integer--> ");
 
-    putchar('\n');   //One line break after loop is done
+    scanf("%d",&num1);
+
+    printf("Enter the second integer--> ");
+
+    scanf("%d",&num2);
+
+    sum = num1 + num2;
+
+    printf("Sum of the above integers --> %d",sum);
 
     return 0;
 }

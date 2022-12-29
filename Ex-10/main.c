@@ -1,34 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-int main()             //To learn getchar()
+int main()
 {
-    int i;
-    char msg[25];
+    float weight1 , weight2 , quantity1, quantity2 , average;
 
-    printf("Type up to 25 characters and the press Enter\n");
+    printf("Enter the first item's weight--> ");
 
-    for(i=0;i<25;i++)
-    {
-        msg[i] = getchar();  //Takes a single character input
+    scanf("%f",&weight1);
 
-        if(msg[i] == '\n')
-        {
-            i--;
+    printf("Enter the first item's quantity--> ");
 
-            break;
-        }
-    }
+    scanf("%f",&quantity1);
 
-    putchar('\n');
+    printf("Enter the second item's weight--> ");
 
-    for(;i>=0;i--)             //continues with the value of i left by the first for loop
-    {
-        putchar(msg[i]);
-    }
+    scanf("%f",&weight2);
 
-    putchar('\n');
+    printf("Enter the second item's quantity--> ");
+
+    scanf("%f",&quantity2);
+
+    average = ((weight1 * quantity1) + (weight2 * quantity2)) / (quantity1 + quantity2);
+
+    printf("Average value--> %.2f",average);
 
     return 0;
 }

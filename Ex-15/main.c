@@ -1,34 +1,27 @@
-/* This program asks a user for their hometown and the two-letter
-abbreviation of their home state. It then uses string concatenation
-to build a new string with both town and state and prints it using
-puts. */
-// stdio.h is needed for puts() and gets()
-// string.h is needed for strcat()
-
-
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main()
 {
-    char city[15];
-    char st[3];
-    char full_Location[18] = "";
+    int amount , twohundred s , hundreds , fifties , twenties , tens , fives;
 
-    puts("What town do you live in?");    //Outputs the string on screen
-    gets(city);   //Gets an input for the city as a string
+    printf("Enter your money amount--> ");
 
-    puts("What state do you live in (2-letter abbreviation)");
-    gets(st);
+    scanf("%d",&amount);
 
-    //Concatenates the strings
-    strcat(full_Location, city);
-    strcat(full_Location, ", ");      //Adds a comma and space between the city and the state abbreviation
-    strcat(full_Location, st);
+    twohundreds = amount / 200;
 
-    puts("\nYou live in ");
-    puts(full_Location);
+    hundreds = (amount % 200) / 100;
+
+    fifties = ((amount % 200) % 100) / 50;
+
+    twenties = (((amount % 200) % 100) % 50) / 20;
+
+    tens = ((((amount % 200) % 100) % 50) % 20) / 10;
+
+    fives = (((((amount % 200) % 100) % 50) % 20) % 10) / 5;
+
+    printf("%d Note(s) of 200\n%d Note(s) of 100\n%d Note(s) of 50\n%d Note(s) of 20\n%d Note(s) of 10\n%d Note(s) of 5",twohundreds,hundreds,fifties,twenties,tens,fives);
 
     return 0;
 }

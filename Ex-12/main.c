@@ -1,23 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<ctype.h>     //Essential to use isupper() and islower()
-#include <string.h>
 
 int main()
 {
-    char inLetter;
+    int integer1 , integer2 , integer3;
 
-    printf("Input a letter:");
-    scanf("%c",&inLetter);
+    printf("Enter three integers--> \n");
 
-    if(isupper(inLetter))    //Returns 1 if the input letter is uppercase otherwise returns 0
+    scanf("%d%d%d",&integer1,&integer2,&integer3);
+
+    if (integer1 >= integer2 && integer1 >= integer3)
     {
-        printf("The letter you input is an uppercase");
+        printf("%d is the maximum",integer1);
     }
-
-    if(islower(inLetter))    //Returns 1 if the input letter is lowercase otherwise returns 1
+    else if (integer2 >= integer1 && integer2 >= integer3)
     {
-        printf("The letter you input is a lowercase");
+        printf("%d is the maximum",integer2);
+    }
+    else if (integer3 >= integer1 && integer3 >= integer1)
+    {
+        printf("%d is the maximum",integer3);
     }
 
     return 0;

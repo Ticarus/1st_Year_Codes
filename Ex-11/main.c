@@ -1,25 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>    //Essential to use isalpha() and isdigit()
 
 int main()
 {
-    char inChar;
+    int ID , wrkhrs , salaryhr , wrkdys , salarymth;
 
-    printf("Input a character or a digit:");
-    scanf("%c",&inChar);
+    printf("Enter worker ID (max 10 characters)--> ");
 
+    scanf("%d",&ID);
 
-    if(isalpha(inChar))    //Returns 1 if inChar is a character if anything else returns 0
-    {
-        printf("Your input is a character\n");
-    }
+    printf("Enter daily working hour--> ");
 
-    if(isdigit(inChar))    //Returns 1 if inChar is a digit if anything else returns 0
-    {
-        printf("Your input is a digit\n");
-    }
+    scanf("%d",&wrkhrs);
+
+    printf("Enter salary per hour--> ");
+
+    scanf("%d",&salaryhr);
+
+    printf("Enter days of work in a week--> ");
+
+    scanf("%d",&wrkdys);
+
+    salarymth = ((salaryhr * wrkhrs) * wrkdys) * 4;
+
+    printf("Worker's ID--> %d\nSalary(monthly)--> %d",ID,salarymth);
 
     return 0;
 }

@@ -3,16 +3,12 @@
 
 int main()
 {
-    char name[] = "Eren Gecer";
-    int age = 20;
-    float pi = 3.14;
+    char chr1 , chr2 , chr3;
+    chr1 = 'A';
+    chr2 = 'B';
+    chr3 = 'C';
 
-    //The sizeof() is used to find the number of memory locations it takes to store values of any data types.
-    printf("The size of name is %d\n",sizeof(name));
-    printf("The size of age is %d\n",sizeof(age));
-    printf("The size of pi is %d\n",sizeof(pi));
-    printf("The length of name is %d\n",strlen(name));
-    //The strlen() is used to find the number of bytes but not including null zero.
+    printf("The reverse of %c%c%c is %c%c%c",chr1,chr2,chr3,chr3,chr2,chr1);
 
     return 0;
 }

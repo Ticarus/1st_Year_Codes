@@ -1,15 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 int main()
 {
-    char first[25] = "Katniss";
-    char last[25] = " Everdeen";
+    float x1 , y1 , x2 , y2 , distance , deltax, deltay;
 
-    strcat(first, last);   //Adds last to the end of first
+    printf("Enter the x value of the first point--> ");
 
-    printf("I am %s\n",first);
+    scanf("%f",&x1);
+
+    printf("Enter the y value of the first point--> ");
+
+    scanf("%f",&y1);
+
+    printf("Enter the x value of second point--> ");
+
+    scanf("%f",&x2);
+
+    printf("Enter the y value of second point--> ");
+
+    scanf("%f",&y2);
+
+    deltax = (x1 - x2);
+
+    deltay = (y1 - y2);
+
+    distance = (deltax * deltax) + (deltay * deltay);
+
+    printf("Distance between the said points--> %.2f",sqrt(distance));
 
     return 0;
 }

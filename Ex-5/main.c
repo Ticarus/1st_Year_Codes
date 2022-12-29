@@ -1,20 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()     //This code is to learn what break does
+int main()
 {
-    int i;
+    float height , width , perimeter , area;
+    height = 7;
+    width = 5;
 
-    for(i=0;i<=10;i++)
-    {
-        printf("%d\n",i);
+    perimeter = (2 * width) + (2 * height);
 
-        if(i==4)
-        {
-            break;    //It gets you out of the loop
-        }
-    }
-    printf("We are out of the loop.");   //Statements out of the loop is executed too
+    area = width * height;
+
+    printf("Perimeter of rectangle is %.1f\nArea of rectangle is %.1f",perimeter,area);
+
 
     return 0;
 }
