@@ -3,35 +3,55 @@
 
 int main()
 {
-    int j,numbers[5],total=0;
-
-    printf("Enter the first number--> ");
-
-    scanf("%d",&numbers[0]);
-
-    printf("Enter the second number--> ");
-
-    scanf("%d",&numbers[1]);
-
-    printf("Enter the third number--> ");
-
-    scanf("%d",&numbers[2]);
-
-    printf("Enter the fourth number--> ");
-
-    scanf("%d",&numbers[3]);
-
-    printf("Enter the fifth number--> ");
-
-    scanf("%d",&numbers[4]);
-
-    for(j = 0;j < 5;j++)
+    int digit;
+    printf("Input a digit(0-9):");
+    scanf("%d",&digit);
+    if(digit >= 0 && digit <= 9)
     {
-        if((numbers[j]%2) != 0)
+        if(digit == 0)
         {
-            total += numbers[j];
+            printf("Zero");
+        }
+        else if(digit == 1)
+        {
+            printf("One");
+        }
+        else if(digit == 2)
+        {
+            printf("Two");
+        }
+        else if(digit == 3)
+        {
+            printf("Three");
+        }
+        else if(digit == 4)
+        {
+            printf("Four");
+        }
+        else if(digit == 5)
+        {
+            printf("Five");
+        }
+        else if(digit == 6)
+        {
+            printf("Six");
+        }
+        else if(digit == 7)
+        {
+            printf("Seven");
+        }
+        else if(digit == 8)
+        {
+            printf("Eight");
+        }
+        else if(digit == 9)
+        {
+            printf("Nine");
         }
     }
-    printf("Sum of all odd values--> %d",total);
+    else
+    {
+        printf("Invalid input\nTry again");
+    }
     return 0;
 }

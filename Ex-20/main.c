@@ -3,33 +3,43 @@
 
 int main()
 {
-    int i;
-
-    printf("Input an integer--> ");
-
-    scanf("%d",&i);
-
-    if(i >= 0 && i <= 20)
+    int day;
+    printf("Input day number(1-7):");
+    scanf("%d",&day);
+    if(day >= 1 && day <= 7)
     {
-        printf("Range is [0,20]");
-    }
-    else if(i >= 21 && i <= 40)
-    {
-        printf("Range is [21,40]");
-    }
-    else if(i >= 41 && i <= 60)
-    {
-        printf("Range is [41,60]");
-    }
-    else if(i >= 61 && i <= 80)
-    {
-        printf("Range is [61,80]");
+        if(day == 1)
+        {
+            printf("Monday");
+        }
+        else if(day == 2)
+        {
+            printf("Tuesday");
+        }
+        else if(day == 3)
+        {
+            printf("Wednesday");
+        }
+        else if(day == 4)
+        {
+            printf("Thursday");
+        }
+        else if(day == 5)
+        {
+            printf("Friday");
+        }
+        else if(day == 6)
+        {
+            printf("Saturday");
+        }
+        else if(day == 7)
+        {
+            printf("Sunday");
+        }
     }
     else
     {
-        printf("Outside the range");
+        printf("Invalid day number\nTry again");
     }
-
-
     return 0;
 }

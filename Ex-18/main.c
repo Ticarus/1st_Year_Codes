@@ -3,32 +3,36 @@
 
 int main()
 {
-    int p,q,r,s;
-
-    printf("Input first integer--> ");
-
-    scanf("%d",&p);
-
-    printf("Input second integer--> ");
-
-    scanf("%d",&q);
-
-    printf("Input third integer--> ");
-
-    scanf("%d",&r);
-
-    printf("Input fourth integer--> ");
-
-    scanf("%d",&s);
-
-    if (q > r && s > p && (r + s) > (p + q))
+    float charge;
+    int id,cnsmd;
+    char name[20];
+    printf("Input your customer ID: ");
+    scanf("%d",&id);
+    printf("Input your name: ");
+    scanf("%s",&name);
+    printf("Input unit consumed: ");
+    scanf("%d",&cnsmd);
+    if(cnsmd < 200)
     {
-        printf("Correct values");
+        charge = (float)cnsmd * 1.20;
     }
-    else
+    else if(cnsmd >= 200 && cnsmd < 400)
     {
-        printf("Wrong values");
+        charge = (float)cnsmd * 1.40;
+    }
+    else if(cnsmd >= 400 && cnsmd < 600)
+    {
+        charge = (float)cnsmd * 1.80;
+    }
+    else if(cnsmd >= 600)
+    {
+        charge = (float)cnsmd * 2.40;
     }
 
+    printf("\n==========Electricity Bill==========\n");
+    printf("Customer ID No:%d\n",id);
+    printf("Customer Name:%s\n",name);
+    printf("Unit Consumed:%d\n",cnsmd);
+    printf("Charge Amount:%.2f",charge);
     return 0;
 }

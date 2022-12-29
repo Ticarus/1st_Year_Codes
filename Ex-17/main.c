@@ -3,19 +3,21 @@
 
 int main()
 {
-    int inpt,years,months,days;
-
-    printf("Input the days--> ");
-
-    scanf("%d",&inpt);
-
-    years = inpt / 365;
-
-    months = (inpt % 365) / 30;
-
-    days = (inpt % 365) % 30;
-
-    printf("%d Year(s)\n%d Month(s)\n%d Day(s) ",years,months,days);
-
+    int buy,sell,profit;
+    printf("Input buy&sell prices: ");
+    scanf("%d%d",&buy,&sell);
+    profit = sell - buy;
+    if(profit > 0)
+    {
+        printf("Profit:%d",profit);
+    }
+    else if(profit == 0)
+    {
+        printf("No profit");
+    }
+    else
+    {
+        printf("Loss:%d",profit);
+    }
     return 0;
 }

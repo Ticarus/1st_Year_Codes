@@ -3,19 +3,20 @@
 
 int main()
 {
-    int inpt,hours,minutes,seconds;
-
-    printf("Input seconds--> ");
-
-    scanf("%d",&inpt);
-
-    hours = inpt / 3600;
-
-    minutes = (inpt % 3600) / 60;
-
-    seconds = (inpt % 3600) % 60;
-
-    printf("H:M:S --> %d:%d:%d",hours,minutes,seconds);
-
+    char chr;
+    printf("Input an alphabet: ");
+    scanf("%c",&chr);
+    if(chr == 'a' || chr == 'A' || chr == 'e' || chr == 'E' || chr == 'u' || chr == 'U' || chr == 'i' || chr == 'I' || chr == 'o' || chr == 'O')
+    {
+        printf("The alphabet is a vowel");
+    }
+    else if((chr >= 'a' && chr <= 'z') || (chr >= 'A' && chr <= 'Z'))
+    {
+        printf("The alphabet is a consonant");
+    }
+    else
+    {
+        printf("The character is not an alphabet");
+    }
     return 0;
 }

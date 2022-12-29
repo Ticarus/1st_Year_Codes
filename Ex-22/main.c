@@ -3,30 +3,64 @@
 
 int main()
 {
-    float side1,side2,side3;
-
-    printf("Input the first side length--> ");
-
-    scanf("%f",&side1);
-
-    printf("Input the second side length--> ");
-
-    scanf("%f",&side2);
-
-    printf("Input the third side length--> ");
-
-    scanf("%f",&side3);
-
-    if(side1 < (side2 + side3) && side2 < (side1 + side3) && side3 < (side1 + side2))
+    int month;
+    printf("Input the month number(1-12):");
+    scanf("%d",&month);
+    if(month >= 1 && month <= 12)
     {
-        float perimeter = side1 + side2 + side3;
+        if(month == 1)
+        {
+            printf("January has 31 days");
+        }
+        else if(month == 2)
+        {
+            printf("February has 28 days\nWhen it is the Leap year it has 29 days");
+        }
+        else if(month == 3)
+        {
+            printf("March has 31 days");
+        }
+        else if(month == 4)
+        {
+            printf("April has 30 days");
+        }
+        else if(month == 5)
+        {
+            printf("May has 31 days");
+        }
+        else if(month == 6)
+        {
+            printf("June has 30 days");
+        }
+        else if(month == 7)
+        {
+            printf("July has 31 days");
+        }
+        else if(month == 8)
+        {
+            printf("August has 31 days");
+        }
+        else if(month == 9)
+        {
+            printf("September has 30 days");
+        }
+        else if(month == 10)
+        {
+            printf("October has 31 days");
+        }
+        else if(month == 11)
+        {
+            printf("November has 30 days");
+        }
+        else if(month == 12)
+        {
+            printf("December has 31 days");
+        }
 
-        printf("Perimeter = %f",perimeter);
     }
     else
     {
-         printf("Not possible to create a triangle");
+        printf("Invalid month number\nTry again");
     }
-
     return 0;
 }
