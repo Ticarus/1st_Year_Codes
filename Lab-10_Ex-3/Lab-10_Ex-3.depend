@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1643201117 source:c:\users\ereng\desktop\eren\coding\projects\c\exercises\experimental\lab-10_ex-3\main.c
+	<stdio.h>
+	<stdlib.h>
+
