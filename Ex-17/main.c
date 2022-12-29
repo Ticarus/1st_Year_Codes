@@ -1,12 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-
-//fabs() function returns the floating point absolute value
 
 int main()
 {
-    printf("Absolute value of 25.0 is %.1f.\n",fabs(25.0));
-    printf("Absolute value of -25.0 is %.1f.",fabs(-25.0));
+    int inpt,years,months,days;
+
+    printf("Input the days--> ");
+
+    scanf("%d",&inpt);
+
+    years = inpt / 365;
+
+    months = (inpt % 365) / 30;
+
+    days = (inpt % 365) % 30;
+
+    printf("%d Year(s)\n%d Month(s)\n%d Day(s) ",years,months,days);
+
     return 0;
 }

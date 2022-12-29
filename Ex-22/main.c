@@ -1,57 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-/* This program takes an ID number from the user and then checks the
-ID against a list of customers in the database. If the customer
-exists, it uses that array element to check their current balance,
-and warns the user if the balance is more than 100 */
-
-
 int main()
 {
-    int ctr;  // Loop counter
-    int idSearch;  // Customer to look for (the key)
-    int found = 0;  // Will be 1 (true) if customer is found
+    float side1,side2,side3;
 
-    // Defines the 10 elements in the two parallel arrays
+    printf("Input the first side length--> ");
 
-    int custID[10] = {313, 453, 502, 101, 892, 475, 792, 912, 343, 633};
-    float custBal[10] = {0.00, 45.43, 71.23, 301.56, 9.08, 192.41, 389.00, 229.67, 18.31, 59.54};
+    scanf("%f",&side1);
 
-    // Interact with the user looking for balance
+    printf("Input the second side length--> ");
 
-    printf("\n\n*** Customer Balance Lookup *** \n");
-    printf("What customer ID do you need to check? ");
-    scanf("%d",&idSearch);
+    scanf("%f",&side2);
 
-    // Search to see that the customer ID exists in the array
+    printf("Input the third side length--> ");
 
-    for(ctr = 0 ; ctr < 10 ; ctr++)
+    scanf("%f",&side3);
+
+    if(side1 < (side2 + side3) && side2 < (side1 + side3) && side3 < (side1 + side2))
     {
-        if(idSearch == custID[ctr])
-        {
-            found = 1;
-            break;
-        }
-    }
+        float perimeter = side1 + side2 + side3;
 
-    if(found)
-    {
-        if(custBal[ctr] > 100.00)
-        {
-            printf("\n** That customer's balance is %.2f.\n",custBal[ctr]);
-            printf("No additional credit.\n");
-        }
-        else
-        {
-            printf("\n** The customer's credit is good!\n");
-        }
+        printf("Perimeter = %f",perimeter);
     }
     else
     {
-        printf("\n** You must have typed an incorrect customer ID.");
-        printf("\n  ID %3d was not found in list.\n",idSearch);
+         printf("Not possible to create a triangle");
     }
 
     return 0;

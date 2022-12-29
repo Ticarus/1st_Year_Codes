@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1640361966 source:c:\users\ereng\desktop\eren\coding\projects\c\exercises\basic declaration and expressions\ex-19\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

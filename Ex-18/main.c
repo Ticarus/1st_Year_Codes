@@ -1,10 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 int main()
 {
-    printf("10 raised to the 3rd power is %.1f.\n",pow(10,3));   //pow() function raises a value to a power
-    printf("16's square root is %.1f",sqrt(16));        //sqrt() function returns the square root of a value
+    int p,q,r,s;
+
+    printf("Input first integer--> ");
+
+    scanf("%d",&p);
+
+    printf("Input second integer--> ");
+
+    scanf("%d",&q);
+
+    printf("Input third integer--> ");
+
+    scanf("%d",&r);
+
+    printf("Input fourth integer--> ");
+
+    scanf("%d",&s);
+
+    if (q > r && s > p && (r + s) > (p + q))
+    {
+        printf("Correct values");
+    }
+    else
+    {
+        printf("Wrong values");
+    }
+
     return 0;
 }

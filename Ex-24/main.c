@@ -1,66 +1,66 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <string.h>
-
-// This program generates 10 random numbers and then sorts them
 
 int main()
 {
-    int ctr, inner, outer, didSwap, temp;
-    int nums[10];
+    int month;
 
-    time_t t;
+    printf("Input a number between 1 to 12 to get the month name in English--> ");
 
-    // If you don't include this statement, your program will always generate the same 10 random numbers
+    scanf("%d",&month);
 
-    srand(time(&t));
-
-    // The first step is to fill the array with random numbers (from 1 to 100)
-
-    for(ctr = 0 ; ctr < 10 ; ctr++)
+    switch(month)
     {
-        nums[ctr] = (rand() % 99) + 1;
-    }
+        case 1 : printf("January");
 
-    // Now list the array as it currently is before sorting
+        break;
 
-    puts("\nHere is the list before sorting:");
+        case 2 : printf("February");
 
-    for(ctr = 0 ; ctr < 10 ; ctr++)
-    {
-        printf("%d\n",nums[ctr]);
-    }
+        break;
 
-    // Sort the array
+        case 3 : printf("March");
 
-    for(outer = 0 ; outer < 9 ; outer++)
-    {
-        didSwap = 0; // Becomes 1 (true) if list is not yet ordered
+        break;
 
-        for(inner = outer ; inner < 10 ; inner++)
-        {
-            if(nums[inner] < nums[outer])
-            {
-                temp = nums[inner];
-                nums[inner] = nums[outer];
-                nums[outer] = temp;
-                didSwap = 1;
-            }
-        }
-        if(didSwap == 0)
-        {
-            break;
-        }
-    }
+        case 4 : printf("April");
 
-    // Now list the array as it currently is after sorting
+        break;
 
-    puts("\nHere is the list after sorting:");
+        case 5 : printf("May");
 
-    for(ctr = 0 ; ctr < 10 ; ctr++)
-    {
-        printf("%d\n",nums[ctr]);
+        break;
+
+        case 6 : printf("June");
+
+        break;
+
+        case 7 : printf("July");
+
+        break;
+
+        case 8 : printf("August");
+
+        break;
+
+        case 9 : printf("September");
+
+        break;
+
+        case 10 : printf("October");
+
+        break;
+
+        case 11: printf("November");
+
+        break;
+
+        case 12: printf("December");
+
+        break;
+
+        default : printf("Invalid input");
+
     }
 
     return 0;

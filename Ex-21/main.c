@@ -3,24 +3,35 @@
 
 int main()
 {
-    int gameScores[10] = {12, 5, 21, 15, 32, 10};
-    int totalPoints = 0;
-    float avg;
+    int j,numbers[5],total=0;
 
-    for(int i = 6 ; i < 10 ; i++)
+    printf("Enter the first number--> ");
+
+    scanf("%d",&numbers[0]);
+
+    printf("Enter the second number--> ");
+
+    scanf("%d",&numbers[1]);
+
+    printf("Enter the third number--> ");
+
+    scanf("%d",&numbers[2]);
+
+    printf("Enter the fourth number--> ");
+
+    scanf("%d",&numbers[3]);
+
+    printf("Enter the fifth number--> ");
+
+    scanf("%d",&numbers[4]);
+
+    for(j = 0;j < 5;j++)
     {
-        printf("What did the player score in game %d?  ", i+1);
-        scanf("%d", &gameScores[i]);
+        if((numbers[j]%2) != 0)
+        {
+            total += numbers[j];
+        }
     }
-
-    for(int i = 0 ; i < 10 ; i++)
-    {
-        totalPoints += gameScores[i];
-    }
-
-    avg = (float)totalPoints / 10;
-
-    printf("\n\nThe player's scoring average is %.1f.", avg);
-
+    printf("Sum of all odd values--> %d",total);
     return 0;
 }
