@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1652374272 source:c:\users\ereng\desktop\eren\coding\codeblocks\projects\c\exercises\experimental\cpabg exercises\ex-33\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bookinfo.h"
+
+1652373874 c:\users\ereng\desktop\eren\coding\codeblocks\projects\c\exercises\experimental\cpabg exercises\ex-33\bookinfo.h
+	<stdio.h>
+	<stdlib.h>
+
