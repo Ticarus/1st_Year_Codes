@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1651596384 source:c:\users\ereng\desktop\eren\coding\codeblocks\projects\c\exercises\experimental\cpabg exercises\ex-13\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+
