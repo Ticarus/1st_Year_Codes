@@ -3,16 +3,16 @@
 
 int main()
 {
-    float height , width , perimeter , area;
-    height = 7;
-    width = 5;
-
-    perimeter = (2 * width) + (2 * height);
-
-    area = width * height;
-
-    printf("Perimeter of rectangle is %.1f\nArea of rectangle is %.1f",perimeter,area);
-
-
+    int age;
+    printf("Input your age: ");
+    scanf("%d",&age);
+    if(age < 18)
+    {
+        printf("You're not eligible to vote");
+    }
+    else
+    {
+        printf("You're eligible to vote");
+    }
     return 0;
 }

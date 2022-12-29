@@ -3,19 +3,25 @@
 
 int main()
 {
-    float pi , radius , perimeter , area;
-
-    pi = 3.14;
-
-    printf("Enter the radius of circle --> ");
-
-    scanf("%f",&radius);
-
-    perimeter = 2 * pi * radius;
-
-    area = pi * (radius * radius);
-
-    printf("Perimeter of circle is %.1f\nArea of circle is %.1f",perimeter,area);
-
+    int m,n;
+    printf("Input an integer: ");
+    scanf("%d",&m);
+    if(m!=0)
+    {
+        if(m>0)
+        {
+            n = 1;
+        }
+        else
+        {
+            n = -1;
+        }
+    }
+    else
+    {
+        n = 0;
+    }
+    printf("The value of m is:%d\n",m);
+    printf("The value of n is:%d",n);
     return 0;
 }

@@ -3,25 +3,20 @@
 
 int main()
 {
-    int a = 123 , b = 12345;
-    float x = 2.43658;
-    long ax = 1234567890;
-    short s = 4040;
-    double dx = 1.1453464;
-    char c = 'A';
-    unsigned long ux = 2544789723;
-
-    printf("a + c = %d\n", a + c);
-    printf("x + c = %f\n", x + c);
-    printf("dx + x = %f\n", dx + x);
-    printf("((int) dx) + ax = %ld\n", ((int) dx) + ax);
-    printf("a + x = %f\n", a + x);
-    printf("s + b = %d\n", s + b);
-    printf("ax + b = %ld\n", ax + b);
-    printf("s + c = %hd\n", s + c);
-    printf("ax + c = %ld\n", ax + c);
-    printf("ax + ux = %lu", ax + ux);
-
-
+    int height;
+    printf("Input your height: ");
+    scanf("%d",&height);
+    if(height < 140)
+    {
+        printf("You're a dwarf");
+    }
+    else if(height >= 140 && height <= 190)
+    {
+        printf("You're normal");
+    }
+    else
+    {
+        printf("You're beanstalk");
+    }
     return 0;
 }

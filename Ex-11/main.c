@@ -3,27 +3,30 @@
 
 int main()
 {
-    int ID , wrkhrs , salaryhr , wrkdys , salarymth;
-
-    printf("Enter worker ID (max 10 characters)--> ");
-
-    scanf("%d",&ID);
-
-    printf("Enter daily working hour--> ");
-
-    scanf("%d",&wrkhrs);
-
-    printf("Enter salary per hour--> ");
-
-    scanf("%d",&salaryhr);
-
-    printf("Enter days of work in a week--> ");
-
-    scanf("%d",&wrkdys);
-
-    salarymth = ((salaryhr * wrkhrs) * wrkdys) * 4;
-
-    printf("Worker's ID--> %d\nSalary(monthly)--> %d",ID,salarymth);
-
+    int a,b,c,d;
+    float x1,x2;
+    printf("Input the value of a,b,c:");
+    scanf("%d %d %d",&a,&b,&c);
+    d = (b*b)-(4*a*c);
+    if(d==0)
+    {
+        printf("Both roots are equal\n");
+        x1 = -b/(2.0*a);
+        x2 = x1;
+        printf("Root 1 = %f\n",x1);
+        printf("Root 2 = %f\n",x2);
+    }
+    else if(d>0)
+    {
+        printf("Both roots are real and different\n");
+        x1 = (-b+sqrt(d))/(2.0*a);
+        x2 = (-b-sqrt(d)/(2.0*a));
+        printf("Root 1 = %d\n",x1);
+        printf("Root 2 = %d\n",x2);
+    }
+    else
+    {
+        printf("Roots are imaginary\nNo solution\n");
+    }
     return 0;
 }

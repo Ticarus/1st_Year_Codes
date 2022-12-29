@@ -3,19 +3,24 @@
 
 int main()
 {
-    int num1 , num2 , sum;
-
-    printf("Enter the first integer--> ");
-
-    scanf("%d",&num1);
-
-    printf("Enter the second integer--> ");
-
-    scanf("%d",&num2);
-
-    sum = num1 + num2;
-
-    printf("Sum of the above integers --> %d",sum);
-
+    int x,y;
+    printf("Input x and y value: ");
+    scanf("%d %d",&x,&y);
+    if(x > 0 && y > 0)
+    {
+        printf("The coordinate point (%d,%d) lies in the first quadrant",x,y);
+    }
+    else if(x < 0 && y > 0)
+    {
+        printf("The coordinate point (%d,%d) lies in the second quadrant",x,y);
+    }
+    else if(x < 0 && y < 0)
+    {
+        printf("The coordinate point (%d,%d) lies in the third quadrant",x,y);
+    }
+    else
+    {
+        printf("The coordinate point (%d,%d) lies in the fourth quadrant",x,y);
+    }
     return 0;
 }

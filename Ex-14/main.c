@@ -3,31 +3,28 @@
 
 int main()
 {
-    float x1 , y1 , x2 , y2 , distance , deltax, deltay;
-
-    printf("Enter the x value of the first point--> ");
-
-    scanf("%f",&x1);
-
-    printf("Enter the y value of the first point--> ");
-
-    scanf("%f",&y1);
-
-    printf("Enter the x value of second point--> ");
-
-    scanf("%f",&x2);
-
-    printf("Enter the y value of second point--> ");
-
-    scanf("%f",&y2);
-
-    deltax = (x1 - x2);
-
-    deltay = (y1 - y2);
-
-    distance = (deltax * deltax) + (deltay * deltay);
-
-    printf("Distance between the said points--> %.2f",sqrt(distance));
-
+    int ang1,ang2,ang3,total;
+    printf("Input triangle's angles: ");
+    scanf("%d%d%d",&ang1,&ang2,&ang3);
+    total = ang1 + ang2 + ang3;
+    if(total == 180)
+    {
+        if(ang1==ang2 && ang2==ang3)
+        {
+            printf("This is an equilateral triangle");
+        }
+        if(ang1==ang2 && ang2!=ang3)
+        {
+            printf("This is an isosceles triangle");
+        }
+        if(ang1!=ang2 && ang1!=ang3 && ang2!=ang3)
+        {
+            printf("This is a scalene triangle");
+        }
+    }
+    else
+    {
+        printf("The triangle is not valid");
+    }
     return 0;
 }

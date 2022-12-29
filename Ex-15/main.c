@@ -3,25 +3,21 @@
 
 int main()
 {
-    int amount , twohundred s , hundreds , fifties , twenties , tens , fives;
+    char check;
+    printf("Input a character: ");
 
-    printf("Enter your money amount--> ");
-
-    scanf("%d",&amount);
-
-    twohundreds = amount / 200;
-
-    hundreds = (amount % 200) / 100;
-
-    fifties = ((amount % 200) % 100) / 50;
-
-    twenties = (((amount % 200) % 100) % 50) / 20;
-
-    tens = ((((amount % 200) % 100) % 50) % 20) / 10;
-
-    fives = (((((amount % 200) % 100) % 50) % 20) % 10) / 5;
-
-    printf("%d Note(s) of 200\n%d Note(s) of 100\n%d Note(s) of 50\n%d Note(s) of 20\n%d Note(s) of 10\n%d Note(s) of 5",twohundreds,hundreds,fifties,twenties,tens,fives);
-
+    scanf("%c",&check);
+    if((check >= 'a' && check <= 'z') || (check >= 'A' && check <= 'Z'))
+    {
+        printf("This is an alphabet\n");
+    }
+    else if(check >= '0' && check <= '9')
+    {
+        printf("This is a digit\n");
+    }
+    else
+    {
+        printf("This is a special character\n");
+    }
     return 0;
 }

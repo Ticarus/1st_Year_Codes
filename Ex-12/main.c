@@ -3,24 +3,50 @@
 
 int main()
 {
-    int integer1 , integer2 , integer3;
-
-    printf("Enter three integers--> \n");
-
-    scanf("%d%d%d",&integer1,&integer2,&integer3);
-
-    if (integer1 >= integer2 && integer1 >= integer3)
+    int roll_num,phy,chm,se,total,percent,rank;
+    char first_name[20],second_name[20];
+    printf("Input the roll number of the student: ");
+    scanf("%d",&roll_num);
+    printf("Input the first name of the student: ");
+    scanf("%s",&first_name);
+    printf("Input the second name of the student: ");
+    scanf("%s",&second_name);
+    printf("Input the marks of physics, chemistry and software engineering 101: ");
+    scanf("%d %d %d",&phy,&chm,&se);
+    total = phy + chm + se;
+    percent = (phy + chm + se) / 3;
+    if(percent >= 60)
     {
-        printf("%d is the maximum",integer1);
+        rank = 1;
     }
-    else if (integer2 >= integer1 && integer2 >= integer3)
+    else if(percent < 60 && percent >= 48)
     {
-        printf("%d is the maximum",integer2);
+        rank = 2;
     }
-    else if (integer3 >= integer1 && integer3 >= integer1)
+    else if(percent < 48 && percent >= 36)
     {
-        printf("%d is the maximum",integer3);
+        rank = 3;
     }
+    else if(percent < 36 && percent >= 24)
+    {
+        rank = 4;
+    }
+    else if(percent < 24 && percent >= 12)
+    {
+        rank = 5;
+    }
+    else if(percent < 12 && percent >= 0);
+    {
+        rank = 6;
+    }
+    printf("Roll No:%d\n",roll_num);
+    printf("Student's Name:%s %s\n",first_name,second_name);
+    printf("Marks in Physics:%d\n",phy);
+    printf("Marks in Chemistry:%d\n",chm);
+    printf("Marks in Software Engineering 101:%d\n",se);
+    printf("Total:%d\n",total);
+    printf("Percentage:%d\n",percent);
+    printf("Rank:%d",rank);
 
     return 0;
 }

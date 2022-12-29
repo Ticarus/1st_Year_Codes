@@ -3,12 +3,16 @@
 
 int main()
 {
-    char chr1 , chr2 , chr3;
-    chr1 = 'A';
-    chr2 = 'B';
-    chr3 = 'C';
-
-    printf("The reverse of %c%c%c is %c%c%c",chr1,chr2,chr3,chr3,chr2,chr1);
-
+    int year;
+    printf("Input a year: ");
+    scanf("%d",&year);
+    if(year%4==0)
+    {
+        printf("%d is a leap year",year);
+    }
+    else
+    {
+        printf("%d is not a leap year",year);
+    }
     return 0;
 }

@@ -3,19 +3,27 @@
 
 int main()
 {
-    int day , year , week , reday;
+    int num1,num2,num3;
+    printf("Input three numbers: ");
+    scanf("%d %d %d",&num1,&num2,&num3);
+    printf("1st Number:%d    2nd Number:%d    3rd Number:%d",num1,num2,num3);
+    if(num1 > num2 && num1 > num3)
+    {
+        printf("1st Number is the greatest");
+    }
+    else if(num2 > num1 && num2 > num3)
+    {
+        printf("2nd Number is the greatest");
+    }
+    else if(num3 > num1 && num3 > num2)
+    {
+        printf("3rd Number is the greatest");
+    }
+    else if(num1 == num2 && num2 == num3)
+    {
+        printf("\nNumbers are the same");
+    }
 
-    printf("Enter the day(s)--> ");
-
-    scanf("%d",&day);
-
-    year = day / 365;
-
-    week = (day % 365) / 7;
-
-    reday = ((day % 365) % 7);
-
-    printf("Year: %d\nWeek: %d\nDay: %d",year,week,reday);
 
     return 0;
 }
