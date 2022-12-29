@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1652213324 source:c:\users\ereng\desktop\eren\coding\codeblocks\projects\c\exercises\experimental\cpabg exercises\ex-30\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
