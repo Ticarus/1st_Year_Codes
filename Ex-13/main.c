@@ -3,36 +3,22 @@
 
 int main()
 {
-    int temp;
-    printf("Input the temperature: ");
-    scanf("%d",&temp);
-    if(temp < 0)
+    int i,j,k,rows,spc;
+    printf("Input row count:");
+    scanf("%d",&rows);
+    spc=rows+4-1;
+    for(i=1;i<=rows;i++)
     {
-        printf("Freezing cold");
-    }
-    else if(temp >= 0 && temp < 10)
-    {
-        printf("Very cold");
-    }
-    else if(temp >=10 && temp < 20)
-    {
-        printf("Cold");
-    }
-    else if(temp >= 20 && temp < 30)
-    {
-        printf("Normal");
-    }
-    else if(temp >= 30 && temp < 35)
-    {
-        printf("Hot");
-    }
-    else if(temp >= 35 && temp < 40)
-    {
-        printf("Very hot");
-    }
-    else if(temp >= 40)
-    {
-        printf("Boiling hot");
+        for(j=spc;j>=1;j--)
+        {
+            printf(" ");
+        }
+        for(k=1;k<=i;k++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+        spc--;
     }
     return 0;
 }

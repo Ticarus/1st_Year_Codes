@@ -3,16 +3,13 @@
 
 int main()
 {
-    int age;
-    printf("Input your age: ");
-    scanf("%d",&age);
-    if(age < 18)
+    int i,n,mult[10];
+    printf("Input an integer:");
+    scanf("%d",&n);
+    for(i=1;i<=10;i++)
     {
-        printf("You're not eligible to vote");
-    }
-    else
-    {
-        printf("You're eligible to vote");
+        mult[i-1] = n * i;
+        printf("%d x %d = %d\n",n,i,mult[i-1]);
     }
     return 0;
 }

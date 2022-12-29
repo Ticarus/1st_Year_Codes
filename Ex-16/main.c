@@ -3,20 +3,22 @@
 
 int main()
 {
-    char chr;
-    printf("Input an alphabet: ");
-    scanf("%c",&chr);
-    if(chr == 'a' || chr == 'A' || chr == 'e' || chr == 'E' || chr == 'u' || chr == 'U' || chr == 'i' || chr == 'I' || chr == 'o' || chr == 'O')
+    int i,j,k,rows,spc;
+    printf("Input row count:");
+    scanf("%d",&rows);
+    spc=rows+4-1;
+    for(i=1;i<=rows;i++)
     {
-        printf("The alphabet is a vowel");
-    }
-    else if((chr >= 'a' && chr <= 'z') || (chr >= 'A' && chr <= 'Z'))
-    {
-        printf("The alphabet is a consonant");
-    }
-    else
-    {
-        printf("The character is not an alphabet");
+        for(j=spc;j>=1;j--)
+        {
+            printf(" ");
+        }
+        for(k=1;k<=i;k++)
+        {
+            printf("%d ",i);
+        }
+        printf("\n");
+        spc--;
     }
     return 0;
 }

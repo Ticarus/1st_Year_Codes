@@ -3,21 +3,19 @@
 
 int main()
 {
-    char check;
-    printf("Input a character: ");
+    int i,n,sum=0;
+    printf("Input number of terms:");
+    scanf("%d",&n);
+    printf("The even numbers are: ");
+    for(i=1;i<=n*2;i++)
+    {
+        if(i % 2 != 1)
+        {
+            printf("%d ",i);
+            sum += i;
+        }
 
-    scanf("%c",&check);
-    if((check >= 'a' && check <= 'z') || (check >= 'A' && check <= 'Z'))
-    {
-        printf("This is an alphabet\n");
     }
-    else if(check >= '0' && check <= '9')
-    {
-        printf("This is a digit\n");
-    }
-    else
-    {
-        printf("This is a special character\n");
-    }
+    printf("\nThe sum of even natural numbers up to %d terms:%d",n,sum);
     return 0;
 }

@@ -3,20 +3,18 @@
 
 int main()
 {
-    int height;
-    printf("Input your height: ");
-    scanf("%d",&height);
-    if(height < 140)
+    int n,i,sum=0;
+    printf("Input number of terms:");
+    scanf("%d",&n);
+    printf("The odd numbers are:");
+    for(i=1;i<=n*2;i++)
     {
-        printf("You're a dwarf");
+        if(i % 2 != 0)
+        {
+            sum += i;
+            printf("%d ",i);
+        }
     }
-    else if(height >= 140 && height <= 190)
-    {
-        printf("You're normal");
-    }
-    else
-    {
-        printf("You're beanstalk");
-    }
+    printf("\nThe sum of odd natural numbers up to %d terms: %d",n,sum);
     return 0;
 }

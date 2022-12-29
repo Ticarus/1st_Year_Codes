@@ -3,16 +3,13 @@
 
 int main()
 {
-    int num1,num2;
-    printf("Enter two integers separated by a comma: ");
-    scanf("%d,%d",&num1,&num2);
-    if(num1==num2)
+    int i,sum=0;
+    for(i=0;i<=10;i++)
     {
-        printf("%d and %d are equal",num1,num2);
+        sum += i;
+
+        printf("%d ",i);
     }
-    else
-    {
-        printf("%d and %d are not equal",num1,num2);
-    }
+    printf("\nSum is:%d",sum);
     return 0;
 }

@@ -3,25 +3,16 @@
 
 int main()
 {
-    int m,n;
-    printf("Input an integer: ");
-    scanf("%d",&m);
-    if(m!=0)
+    int num1,i,j;
+    printf("Input up to the table number starting from 1 to wished integer:");
+    scanf("%d",&num1);
+    for(i=1;i<=num1;i++)
     {
-        if(m>0)
+        for(j=1;j<=10;j++)
         {
-            n = 1;
+            printf("%dx%d=%d || ",j,i,i*j);
         }
-        else
-        {
-            n = -1;
-        }
+        printf("\n");
     }
-    else
-    {
-        n = 0;
-    }
-    printf("The value of m is:%d\n",m);
-    printf("The value of n is:%d",n);
     return 0;
 }

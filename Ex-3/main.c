@@ -3,16 +3,15 @@
 
 int main()
 {
-    int x;
-    printf("Input an integer: ");
-    scanf("%d",&x);
-    if(x<0)
+    int numbers[10],i,sum=0;
+    float avg;
+    for(i=1;i<=10;i++)
     {
-        printf("%d is a negative integer",x);
+        printf("Input number %d:",i);
+        scanf("%d",&numbers[i-1]);
+        sum = sum + numbers[i-1];
     }
-    else
-    {
-        printf("%d is a positive integer",x);
-    }
+    avg = (float)sum/10;
+    printf("The sum:%d\nThe average:%.2f",sum,avg);
     return 0;
 }

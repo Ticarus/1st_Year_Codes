@@ -3,16 +3,14 @@
 
 int main()
 {
-    int x;
-    printf("Input an integer: ");
-    scanf("%d",&x);
-    if(x%2==0)
+    int n,i,sum=0;
+    printf("Input the number of terms:");
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
     {
-        printf("%d is an even integer",x);
+        sum = sum+i;
+        printf("%d ",i);
     }
-    else
-    {
-        printf("%d is an odd integer",x);
-    }
+    printf("\nSum is:%d",sum);
     return 0;
 }

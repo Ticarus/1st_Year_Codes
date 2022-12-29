@@ -1,7 +1,5 @@
 # depslib dependency file v1.0
-1651595053 source:c:\users\ereng\desktop\eren\coding\codeblocks\projects\c\exercises\experimental\cpabg exercises\ex-11\main.c
+1644874860 source:c:\users\ereng\desktop\eren\coding\projects\c\exercises\w3resource exercises\for loop\ex-11\main.c
 	<stdio.h>
 	<stdlib.h>
-	<string.h>
-	<ctype.h>
 

@@ -3,24 +3,16 @@
 
 int main()
 {
-    int x,y;
-    printf("Input x and y value: ");
-    scanf("%d %d",&x,&y);
-    if(x > 0 && y > 0)
+    int rows,i,j;
+    printf("Input row count:");
+    scanf("%d",&rows);
+    for(i=1;i<=rows;i++)
     {
-        printf("The coordinate point (%d,%d) lies in the first quadrant",x,y);
-    }
-    else if(x < 0 && y > 0)
-    {
-        printf("The coordinate point (%d,%d) lies in the second quadrant",x,y);
-    }
-    else if(x < 0 && y < 0)
-    {
-        printf("The coordinate point (%d,%d) lies in the third quadrant",x,y);
-    }
-    else
-    {
-        printf("The coordinate point (%d,%d) lies in the fourth quadrant",x,y);
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        printf("\n");
     }
     return 0;
 }
